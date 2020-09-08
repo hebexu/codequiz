@@ -8,7 +8,7 @@
     font-family: Arial, Helvetica, sans-serif
     margin: 0;
     padding: 0
-    color: #333;
+    color: #333
 }
 
 h1,
@@ -50,3 +50,32 @@ h3{
     max-width: 80rem;
     margin: 0 auto;
 }
+
+a {
+    color:red;
+    }
+    .btn{
+    color: gray;
+    }
+    
+    .qtitle
+    {
+        padding:30px 0 0 0px;
+        font-size:16px;
+        }
+    .qcontent
+    {
+        padding:20px 0 0 0px;
+        font-size:12px;
+        }
+    .Remaining
+    {
+        padding:20px 0 0 0px;
+        font-size:12px;
+        color:Red;
+        
+        }
+    .quizArea
+    {
+        padding: 30px 0 0 20px;
+        }

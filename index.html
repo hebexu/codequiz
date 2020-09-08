@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Code Quiz</title>
     <link rel="stylesheet" href="style.css">
+    <script src="script.js" type="text.javascript"></script>
 </head>
 <body>
     <div class="container"></div>
@@ -12,5 +13,21 @@
        <h1>Code Quiz</h1>
        <a class="btn" href="/game.html">play</a>
        <a class="btn" href="/highscores.html">High Score</a>
+
+       <div class="quizArea">
+           <div id="playgame" type="button" value=" playnow " onclick="StartQuiz()"/ ></div>
+
+           <div class="Quiz">
+               <div id="quiztitle" class="qtitle"></div>
+               <div id="quizcontent" class="qcontent"></div>
+
+               <input id="qa0" type="radio" name="qa" value="0" /><span id="qv0"></span><br /><br />
+               <input id="qa1" type="radio" name="qa" value="1" /><span id="qv1"></span><br /><br />
+               <input id="qa2" type="radio" name="qa" value="2" /><span id="qv2"></span><br /><br />
+
+           </div>
+       </div>
+       <div class="remaining">Remaining Time: <span id="timeouit"></span></div>
+       <div><input id="button1" type="button" value="confirm" onclick="CheckQuiz()"/></div>
 </body>
 </html>
