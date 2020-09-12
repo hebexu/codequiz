@@ -58,6 +58,7 @@ function CheckQuiz() {
     var answer = document.getElementsByName("qa");
     var value;
     var selectAnswer;
+// for loop to repeat the quiz.
     for (var i = 0; i < answer.length; i++) {
         if (answer[i].checked) {
             value = answer[i].value;
