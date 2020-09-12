@@ -12,29 +12,61 @@
         <div id="home" class="flex-center flex-column">
             <h1>
                 Code Quiz</h1>
-                <div>
-                    <input id="playgame" type="button" value=" Play Now " onclick="StartQuiz();" />
-                </div>
+            <div class="Tips">
+                Total Quiz: 3
+                <br />
+                Total time: 60 s
+                <br />
+                One correctly score: 10
+                <br />
+                Time deducted when error answers: 5s
+            </div>
+            <div>
+                <input id="playgame" type="button" value=" Play Now " onclick="StartQuiz();" />
+            </div>
             <div class="quizArea">
-                
-                <div id="nowQuiz" class="Quiz" >
+                <div id="nowQuiz" class="Quiz" style="display: none">
                     <div id="quiztitle" class="qtitle">
                     </div>
                     <div id="quizcontent" class="qcontent">
                     </div>
-                    <input id="qa0" type="radio" name="qa" value="0" /> <span id="qv0"></span><br />
+                    <input id="qa0" type="radio" name="qa" value="0" />
+                    <span id="qv0"></span>
                     <br />
-                    <input id="qa1" type="radio" name="qa" value="1" /> <span id="qv1"></span><br />
                     <br />
-                    <input id="qa2" type="radio" name="qa" value="2" /> <span id="qv2"></span><br />
+                    <input id="qa1" type="radio" name="qa" value="1" />
+                    <span id="qv1"></span>
+                    <br />
+                    <br />
+                    <input id="qa2" type="radio" name="qa" value="2" />
+                    <span id="qv2"></span>
+                    <br />
                     <br />
                 </div>
             </div>
-            <div id="timeout" class="remaining">
-                <span ></span>
+            <div id="quizResult" style="display: none">
+                Hi <span id="resUserName"></span>, your score is: <span id="resScore"></span>
+                <br />
+                <br />
+                Number of correct answers: <span id="resCorrNum"></span>
+                <br />
+                <br />
+                Number of error answers: <span id="resErrNum"></span>
+                <br />
+                <br />
             </div>
-            <div>
-                <input id="confirmBtn" type="button" value=" Confirm " onclick="CheckQuiz()" /></div>
+            <div id="yourName" style="display: none">
+                Please Input your Name:
+                <input id="yName" type="text" />
+                <input id="submitname" type="button" value="  OK  " onclick="submitName()" />
+            </div>
+            <div id="timeout" class="remaining">
+                <span></span>
+            </div>
+            <div style="text-align: center">
+                <input id="confirmBtn" type="button" value=" Confirm " onclick="CheckQuiz()" style="display: none" />
+                <input id="gobackBtn" type="button" value=" Goback " onclick="goBack()"
+                    style="display: none" /></div>
         </div>
     </div>
 </body>
