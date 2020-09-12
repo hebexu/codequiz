@@ -13,14 +13,14 @@ function BuildQuizArray()
 
     //choose three questions
     quizNumber = 3;
-    quizTitle = new Array("1+1=?", "2+2=?", "3+3=?");
+    quizTitle = new Array("In what city did the Commonwealth Parliament first sit?", "In what state/territory was the highest recorded temperature, of 53oC, recorded?", "What year did Cyclone Tracy hit Darwin?");
     //three options for each question
     quizContent = new Array();
-    quizContent[0] = new Array("3","5","2");
-    quizContent[1] = new Array("4","2","7");
-    quizContent[2] = new Array("5", "6", "7");
+    quizContent[0] = new Array("Sydney","Melbourne","Adelaide");
+    quizContent[1] = new Array("Queensland","Melbourne","Canberra");
+    quizContent[2] = new Array("1981", "1969", "1974");
     //quiz right answer index
-    quizAnswer = new Array(2, 0, 1);
+    quizAnswer = new Array(1, 0, 2);
 }
 
 //current question
@@ -58,6 +58,7 @@ function CheckQuiz() {
     var answer = document.getElementsByName("qa");
     var value;
     var selectAnswer;
+
 // for loop to repeat the quiz.
     for (var i = 0; i < answer.length; i++) {
         if (answer[i].checked) {
