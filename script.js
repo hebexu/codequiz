@@ -1,39 +1,59 @@
-var quizTitle
-var quizContent
-var quizAnswer
-var quizNumber
+//define quiz title
+var quizTitle;
+//define quiz content
+var quizContent;
+//define quiz answer
+var quizAnswer;
+//define quiz number
+var quizNumber;
 
-function BuildQuizArray(){
+//build quizarray which show  quiztitle, quiznumber, quizcontent as well as quiz right answer.
+function BuildQuizArray()
+{
+
+    //choose three questions
     quizNumber = 3;
     quizTitle = new Array("1+1=?", "2+2=?", "3+3=?");
-
+    //three options for each question
     quizContent = new Array();
     quizContent[0] = new Array("3","5","2");
     quizContent[1] = new Array("4","2","7");
     quizContent[2] = new Array("5", "6", "7");
-
+    //quiz right answer index
     quizAnswer = new Array(2, 0, 1);
-
-
 }
 
+//current question
 var nowTopic = 0;
-function StartQuiz()
-{
+
+var isStart = false;
+var correctNum = 0;
+var errorNum = 0;
+
+//click paly button
+function StartQuiz() {
+
+//create question list
     BuildQuizArray();
-
+//dispaly current question
     document.getElementById("quiztitle").innerText =quizTitle[nowTopic];
-
-    
 
     document.getElementById("qv0").innerText = quizContent[nowTopic][0];
     document.getElementById("qv1").innerText = quizContent[nowTopic][1];
     document.getElementById("qv2").innerText = quizContent[nowTopic][2];
-
+//start timer
     startTimer();
+    isStart = true;
 }
 
-function checkQuiz() {
+//choose the right answer, then click confirm and verify the answer
+function CheckQuiz() {
+
+    if ( !isStart)
+    {
+        alert("Please click 'Play Now' ");
+        return;
+    }
 
     var answer = document.getElementsByName("qa");
     var value;
@@ -51,27 +71,36 @@ function checkQuiz() {
         return;
     }
 
-    if(value ==quizAnswer[nowTopic])
-    {
-    alert("Correct!");
+    if (value == quizAnswer[nowTopic]) {
+        alert("Correct!");
+        correctNum++;
     }
-    else
-    alert("Error!");
+    else {
+        alert("Error!");
+        errorNum++;
+    }
 
-selectAnswer.checked = false;
+    selectAnswer.checked = false;
 
     clearInterval(myInterval);
     nowTimer = 10;
 
     nowTopic++;
-    if (nowTopic<quizNumber)
-    StartQuiz();
+    if (nowTopic < quizNumber)
+        StartQuiz();
+    else {
+        document.getElementById("timeout").innerText = "All Quiz Completed";
+        document.getElementById("nowQuiz").innerHTML = "Number of correct answers: " + correctNum + "<br />" + "Number of error answers: " + errorNum;
+
+       // document.getElementById("nowQuiz").style.display = "none";
+    }
 }
 
 var myInterval ;
 var nowTimer = 10;
 function QuizTimer() {
-    document.getElementById("timeout").innerText = nowTimer +" s";
+
+    document.getElementById("timeout").innerText = "Remaining Time:  "+ nowTimer +" s";
     nowTimer--;
     if (nowTimer == 0) {
         clearInterval(myInterval);
@@ -84,4 +113,4 @@ function QuizTimer() {
 function startTimer() {
     myInterval = setInterval("QuizTimer()", 1000);
 }
-}
+

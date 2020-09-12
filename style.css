@@ -1,47 +1,53 @@
-:root {
+:root
+{
     background-color: #ecf5ff;
     front-size: 62.5%;
 }
 
-* {
+*
+{
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif
+    font-family: Arial, Helvetica, sans-serif;
     margin: 0;
-    padding: 0
-    color: #333
+    padding: 0;
+    color: #333;
 }
 
-h1,
-h2,
-h3,
-h4{
+h1, h2, h3, h4
+{
     margin-bottom: 1rem;
 }
-h1,{
-    font-size: 5.4rem;
-    color:red;
+h1
+{
+    font-size: 3.8rem;
+    color: skyblue;
     margin-bottom: 5rem;
 }
 
-h1>span{
+h1 > span
+{
     font-size: 2.4rem;
-    font-weight:500;
+    font-weight: 500;
 }
 
-h2{
+h2
+{
     font-size: 4.2rem;
     margin-bottom: 4rem;
     font-weight: 700;
 }
 
-h3{
-    font-size:2.8rem;
-    font-weight:500;
+h3
+{
+    font-size: 2.8rem;
+    font-weight: 500;
 }
 
 /* UNITLITES*/
 
-.Container {
+.container
+{
+    text-align: center;
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -51,31 +57,41 @@ h3{
     margin: 0 auto;
 }
 
-a {
-    color:red;
-    }
-    .btn{
+a
+{
+    color: red;
+    text-align: center;
+}
+.btn
+{
     color: gray;
+}
+
+.qtitle
+{
+    padding: 30px 0 0 0px;
+    font-size: 16px;
+}
+.qcontent
+{
+    padding: 20px 0 0 0px;
+    font-size: 12px;
+}
+.remaining
+{
+    text-align:center;
+    padding: 20px 0 20px 0px;
+    font-size: 16px;
+    color: Red;
+}
+.quizArea
+{
+    padding: 30px 0 0 0px;
+}
+
+#playgame, #confirmBtn
+{
+    width: 200px;
+    height: 40px;
+    font-size:18px;
     }
-    
-    .qtitle
-    {
-        padding:30px 0 0 0px;
-        font-size:16px;
-        }
-    .qcontent
-    {
-        padding:20px 0 0 0px;
-        font-size:12px;
-        }
-    .Remaining
-    {
-        padding:20px 0 0 0px;
-        font-size:12px;
-        color:Red;
-        
-        }
-    .quizArea
-    {
-        padding: 30px 0 0 20px;
-        }
