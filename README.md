@@ -11,15 +11,15 @@ Developer: Hebe
 
 2. Project coding introduction:
 The project includes 3 source files: 
-index.html： 负责面向用户的显示和交互操作。
-script.js 负责生成随机密码的JavaScript 脚本文件。
-style.css ： 负责网页的显示样式。
-index.html 文件将引用 script.js 和 style.css 。
+index.html is responsible for user interface and communication operation;
+script.js is responsible for playing quizes.
+style.css is responsible for the display style of HTML.
+index.html will call script.js file and sytle.css file. 
 
-3. Quiz的主要实现说明
-script.js 文件负责答题逻辑的主要函数实现说明
-BuildQuizArray() 函数，主要用于初始化 3道题目。 当然，此处也可以将题目改为任意数量。
-StartQuiz()， 当用户点击 Play Now时，在界面上显示题目，并开始10秒倒计时。
-checkQuiz(),  选好选项后， 点击Confirm 按钮， 将调用该函数验证答案，并提示回答是否正确。如果还有未答的题目， 则启动显示下一题
-QuizTimer()， 倒计时计数器启动，在界面上显示倒计时，如果超过10秒，则显示Timeout信息。
-startTimer()，启动计时程序
+3. Quiz implementation introduction:
+script.js is responsible for the introduction of main functions of the logic of answering quizes. 
+BuildQuizArray() function, initializes three quizes, and is capable for changing the quiz numbers. 
+StartQuiz()， when user click "play now", the page will show quizes and start for 10 seconds countdown.
+checkQuiz(),  click "Confirm" button after choosing answer options, then will call the function for verifying the right answer. The page will dispaly next quiz if there is unanswered quiz. 
+QuizTimer()， enables countdown counter, the countdown will be displayed on screen. It will show "Timeout", if it exceeds 10 seconds. 
+startTimer()，enables timer program.
